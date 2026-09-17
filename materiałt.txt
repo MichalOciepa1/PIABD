@@ -5,3 +5,17 @@ tworzenie tabeli - create tabel
 pozyskiwanie zawartości tabeli - describe (nazwa tabeli)
 pokazywanie baz danych - show databases
 https://pasja-informatyki.pl
+równy =
+nierówny <>
+mniejszy <
+większy >
+mniejszy lub równy <=
+większy lub równy >=
+AND - i
+OR - lub
+/*komentarz*/
+/*nierówny*/ Where cena <> 34200 ;
+SELECT * FROM `auto` WHERE cena <> 34200 AND cena <> 10000 ORDER BY cena DESC limit 3/*nierówny za wyjątkiem dwóch 3 rekordy sortowane malejąco -DESC*/;
+/*between*/ - pomiędzy
+SELECT * FROM `auto` WHERE cena BETWEEN 10000 AND 35000 ORDER BY cena DESC limit 3
+SELECT * FROM auto WHERE  kolor BETWEEN 'A' AND 'C'; /*kolory od A do C*/
