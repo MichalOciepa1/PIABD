@@ -19,3 +19,7 @@ SELECT * FROM `auto` WHERE cena <> 34200 AND cena <> 10000 ORDER BY cena DESC li
 /*between*/ - pomiędzy
 SELECT * FROM `auto` WHERE cena BETWEEN 10000 AND 35000 ORDER BY cena DESC limit 3
 SELECT * FROM auto WHERE  kolor BETWEEN 'A' AND 'C'; /*kolory od A do C*/
+INSERT INTO auto (kolor,typ) VALUES ("czerwony","kombi") - dodawanie rekordu
+UPDATE auto SET cena="10000" WHERE auto_id=42 - zaktalizowanie rekordu
+DELETE FROM auto WHERE auto_id=43 - usuwanie Rekordu
+Drop - usuniecie bazy lub tabeli
