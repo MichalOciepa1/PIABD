@@ -23,3 +23,11 @@ INSERT INTO auto (kolor,typ) VALUES ("czerwony","kombi") - dodawanie rekordu
 UPDATE auto SET cena="10000" WHERE auto_id=42 - zaktalizowanie rekordu
 DELETE FROM auto WHERE auto_id=43 - usuwanie Rekordu
 Drop - usuniecie bazy lub tabeli
+order by asc - rosnąco
+not in - nie w 
+in - w
+SELECT * FROM `uczniowie` WHERE nazwisko Like 'K%'; tylko nazwiska na literę K
+SELECT * FROM `uczniowie` WHERE nazwisko Like '_I%a'; - druga litgera I oraz ostatnia A
+SELECT * FROM `uczniowie` WHERE data_urodzenia BETWEEN '2007-03-17' AND '2008-03-17' ORDER BY data_urodzenia ASC;
+SELECT COUNT(*) AS chlopaki_fajne_z_lodzi FROM uczniowie WHERE miejscowosc='Łódź'; - zliczanie ilości 
+SELECT  hobby, COUNT(*) AS liczba_uczniów from uczniowie group by hobby HAVING COUNT(*) >= 10 order by liczba_uczniów DESC; - wylicza ile osob xajmuje się jakim hobby
