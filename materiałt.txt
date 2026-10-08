@@ -26,8 +26,42 @@ Drop - usuniecie bazy lub tabeli
 order by asc - rosnąco
 not in - nie w 
 in - w
+zad1 wyświetl uczniów mieszkających w Łodzi
+zad 2 wyświetl uczniów którzy są z łodzi których hobby to programowanie select from uczniowie where miejscowość = 'lodz' and ' hobby = 'programowanie'
+zad 3 wyświetl uczniów mieszkających w łodzi lub w wraszawie select from uczniowie where miejscowość = 'lodz' or miejscowość = 'warszawa'
+zad 4 wyświetl uczniów z trzech wskazanych miejscowości select from uczniowie where miejscowość in ('lodz' , 'warszawa' , 'krakow')
+zad 5 wyświetl uczniów którzy nie mieszkają  select
+zad 6 wyświetl uczniów których nazwisko zaczyna się od litery k select from ucxniowie where nazwisko like 'k%'
+zad 7 wyświetl uczniów urodzonych w latach 2007 - 2008 select from uczniowie where data_urodzenia B
+zad 8 wyświetl wszystkie miejscowości bez powtórzeń
+zad 9 policz wszystkich uczniów z Łodzi count(*) as liczba_uczniów from uczniowie where miejscowość = 'lodz'
+zad 10 wyświetl hobby które występują u co najmniej 10 uczniów Select hobby from uczniowie Group by hobby having count(*) >=10
 SELECT * FROM `uczniowie` WHERE nazwisko Like 'K%'; tylko nazwiska na literę K
 SELECT * FROM `uczniowie` WHERE nazwisko Like '_I%a'; - druga litgera I oraz ostatnia A
 SELECT * FROM `uczniowie` WHERE data_urodzenia BETWEEN '2007-03-17' AND '2008-03-17' ORDER BY data_urodzenia ASC;
 SELECT COUNT(*) AS chlopaki_fajne_z_lodzi FROM uczniowie WHERE miejscowosc='Łódź'; - zliczanie ilości 
 SELECT  hobby, COUNT(*) AS liczba_uczniów from uczniowie group by hobby HAVING COUNT(*) >= 10 order by liczba_uczniów DESC; - wylicza ile osob xajmuje się jakim hobby
+
+Najważniejsze funkcje agregujące
+
+• COUNT() – zwraca liczbę wierszy lub rekordów (np. COUNT(*) liczy wszystkie wiersze, a COUNT(kolumna) pomija wartości NULL).
+• SUM() – oblicza sumę wartości w podanej kolumnie liczbowej (ignoruje NULL).
+• AVG() – wylicza średnią arytmetyczną dla wskazanego pola liczbowego (ignoruje NULL).
+• MIN() – zwraca najmniejszą wartość z danego zbioru (liczbową lub tekstową).
+• MAX() – zwraca największą wartość z danego zbioru.
+
+1.wyłącza serwer - mysqladmin -u root shutdown 
+2.Uruchomienie serwera myaql jako samodzielną aplikację - mysqld --console
+3.Zatrzymanie usługi mysql - net stop nazwa_usługi
+4.Uruchom program kilenta i polacz się z serwerem mysql - mysql -u root --password=hasło / mysql -u root -phasło
+5.kończenie połączenia z serwerem - quit
+6.Tworzenie bazy - create database nazwa_bazy;
+7.Usówanie bazy danych - drop database nazwa_bazy;
+8.logowanie do serewera z wyborem bazy - mysql -u nazwa_użytkownika -phasło nazwa_bazy / mysql nazwa_bazy -u nazwa_użytkownika -phasło
+9.Tworzenie i usówanie kont użytkowników - create user nazwa [identifed by [password] 'hasło'];
+10.Tworzenie konta z jednoczesnym nadaniem hasła - create user stachu2 identified by 'Kalafior';
+11.Usuwanie konta użytkownika - drop user nazwa_użytkownika
+12.Zmiana nazwy - rename user stara_nazwa to nowa_nazwa
+13.zmiana hasła do konta - set password for nazwa_użytkownika = password('Kalafior');
+14.Nadawanie praw do konta użytkownika - Grant usage   ON *  TO stachu
+15.Zmiana hasła drugi sposób (Grant) - Grant usage ON* to nazwa_użytkownika identified by 'hasło';
