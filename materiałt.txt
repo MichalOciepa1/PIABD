@@ -65,3 +65,8 @@ Najważniejsze funkcje agregujące
 13.zmiana hasła do konta - set password for nazwa_użytkownika = password('Kalafior');
 14.Nadawanie praw do konta użytkownika - Grant usage   ON *  TO stachu
 15.Zmiana hasła drugi sposób (Grant) - Grant usage ON* to nazwa_użytkownika identified by 'hasło';
+16.Pobieranie wierszy od konkretnej pozycji - Select * FROM Osoby ORDER BY Nazwisko 4, 3;
+17.Usuniecie wszystkich danych z tabeli - DELETE FROM Osoby;
+18.Usuwanie wybranych rekordów -  DELETE FROM auto where auto_id in (3, 6, 9);
+19.Usuwanie wierszy z okreslonego przedziału - DELETE FROM Osoby WHERE Id BETWEEN 1 AND 10;
+20.
