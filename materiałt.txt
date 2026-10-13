@@ -70,3 +70,15 @@ Najważniejsze funkcje agregujące
 18.Usuwanie wybranych rekordów -  DELETE FROM auto where auto_id in (3, 6, 9);
 19.Usuwanie wierszy z okreslonego przedziału - DELETE FROM Osoby WHERE Id BETWEEN 1 AND 10;
 20.
+Poradnik (tutorial) - Git
+.pdf (spis treści)
+     ( numery strony)
+     (nagłówki)
+     (zrzuty ekranu - podpisane i ponumerowane)
+usługi xampp , pliki konfiguracyjne , na jakich portach pracuje xampp
+backup - baz danych
+/kopia bazy (plik binarny)
+PRACA DOMOWA
+dodajemy kolumny ze zdjeciem
+export do sql 
+wykonac backup poleceniem sqldump
