@@ -85,3 +85,5 @@ wykonac backup poleceniem sqldump
 PORADNIK DO BACKUP
 mysqldump -u root 4bgr1 uczniowie > uczniowie_backup.sql
 type uczniowie_backup.sql
+wstawianie kolumny ze zdjeciem
+ALTER TABLE nazwa_tabeli ADD COLUMN zdjecie BLOB;
