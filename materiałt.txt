@@ -82,3 +82,6 @@ PRACA DOMOWA
 dodajemy kolumny ze zdjeciem
 export do sql 
 wykonac backup poleceniem sqldump
+PORADNIK DO BACKUP
+mysqldump -u root 4bgr1 uczniowie > uczniowie_backup.sql
+type uczniowie_backup.sql
