@@ -111,3 +111,16 @@ porty konfiguracje jak sie zmienia uprawnienia, hasło
 MONTH - wbudowana funkcja 
 UPPER - powiększa litery
 AS - Nadawanie włsnych nazw kolumny
+
+
+TEMAT: Funkcje agregujące.
+
+1.Dodaj nowego ucznia , podając wszystkie kolumny, w tym identyfikator - INSERT INTO uczniowie (id, nazwisko, imie, data_urodzenia, miejscowosc, kod_pocztowy, email, telefon, hobby) VALUES (NULL, 'Kowalski', 'Adam', '2008-04-15', 'Łódź', '90-001', 'adam.kowalski1001@uczen.example', '599001001', 'szachy,);
+
+     2.Dodaj dwóch uczniów jednych poleceniem INSERT - INSERT INTO uczniowie (id, nazwisko, imie, data_urodzenia, miejscowosc, kod_pocztowy, email, telefon, hobby) VALUES (NULL, 'Kowalski', 'Jan', '2008-04-15', 'Łódź', '90-001', 'adam.kowalski1001@uczen.example', '599001001', 'szachy'), (NULL, 'Kowalski', 'Jakub', '2008-04-15', 'Łódź', '90-001', 'adam.kowalski1001@uczen.example', '599001001', 'szachy'); 
+
+
+<?php
+//Stworzenie połączenia z bazą danych
+mysqli_connect("localhost", "root", "", "4bgr1");
+?>
