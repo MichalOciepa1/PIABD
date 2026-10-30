@@ -124,3 +124,111 @@ TEMAT: Funkcje agregujące.
 //Stworzenie połączenia z bazą danych
 mysqli_connect("localhost", "root", "", "4bgr1");
 ?>
+
+Tworzenie BAZY
+--------------
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "";
+
+$polaczenie = mysqli_connect("$host", "$user", "$password", "$database");
+if(!$polaczenie) {
+    die("Błąd połączenia z bazą danych "  . mysqli_connect_error());
+} else {
+    echo "Stworzono baze danych o nazwie stachu";
+}
+
+$sql = "CREATE database stachu";
+
+
+mysqli_query($polaczenie, $sql);
+?>
+
+Usuwanie BAZY
+-------------
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "stachu";
+
+$polaczenie = mysqli_connect("$host", "$user", "$password", "$database");
+if(!$polaczenie) {
+    die("Błąd połączenia z bazą danych "  . mysqli_connect_error());
+} else {
+    echo "Stworzono baze danych o nazwie stachu";
+}
+
+$sql = "DROP database stachu";
+
+
+mysqli_query($polaczenie, $sql);
+?>
+
+TWORZENIE W BAZIE STACHU TABELI STACHU
+
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "stachu";
+
+// Połączenie z serwerem MySQL
+$polaczenie = mysqli_connect($host, $user, $password);
+
+if (!$polaczenie) {
+    die("Błąd połączenia z bazą danych: " . mysqli_connect_error());
+}
+
+// Utworzenie bazy danych
+$sql = "CREATE DATABASE IF NOT EXISTS stachu";
+
+if (mysqli_query($polaczenie, $sql)) {
+    echo "Utworzono bazę danych stachu.<br>";
+} else {
+    die("Błąd tworzenia bazy danych: " . mysqli_error($polaczenie));
+}
+
+// Wybranie bazy danych
+mysqli_select_db($polaczenie, $database = "stachu");
+
+// Utworzenie tabeli
+$sql = "CREATE TABLE IF NOT EXISTS stachu (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    imie VARCHAR(100) NOT NULL,
+    nazwisko VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+)";
+
+if (mysqli_query($polaczenie, $sql)) {
+    echo "Utworzono tabelę stachu.";
+} else {
+    echo "Błąd tworzenia tabeli: " . mysqli_error($polaczenie);
+}
+
+// Zamknięcie połączenia
+mysqli_close($polaczenie);
+?>
+
+DODAWANIE REKORDU DO BAZY
+-------------------------
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "stachu";
+
+$polaczenie = mysqli_connect("$host", "$user", "$password", "$database");
+if(!$polaczenie) {
+    die("Błąd połączenia z bazą danych "  . mysqli_connect_error());
+} else {
+    echo "Stworzono baze danych o nazwie stachu";
+}
+
+$sql = "INSERT INTO stachu (nazwisko, imie) VALUES ('Nowak', 'Kamil');";
+
+
+mysqli_query($polaczenie, $sql);
+?>
