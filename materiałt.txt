@@ -237,3 +237,4 @@ mysqli_query($polaczenie, $sql);
 
 1 - INSERT INTO logowanie (id, nick, haslo) VALUES ( (SELECT logowanie FROM uczestnicy WHERE imie = 'Jeremi' AND nazwisko = 'Kowalski' ), 'Jeremi' Jer123');
 2 - śerdni rok urodzenia - SELECT FLOOR(AVG(rokUr)) AS "Średni rok urodzenia" FROM uczestnicy;
+przerobić co najmniej 4 odcinki ZELENTA (MySql , php) też 4
