@@ -545,3 +545,10 @@ MariaDB [nauka]> select * from pracownicy;
 MariaDB [nauka]>
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Praca domowa wymaga linków
+na swoim koncie - github 
+1.Projektujemy i uruchamiamy prostą strone internetową 
+2.Na stronie umieszczamy przycisk z dowolnym skryptem php (index.php)
+3.Skrypt php ma wykonać dowolną operacje na bazie danych 
+4.Przesyłamy link do strony na githubie z bazą danych oraz link do dokumentu opisującego proces konfiguracji .PDF
